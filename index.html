@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="SetInterval Test" />
+  <title>SetInterval Test</title>
+</head>
+
+<body>
+  <button id="btn">Countdown</button>
+  <input id="input" type="number" value="2" min=1 max=59 size=5 />mins
+  <p id="output">0m 0s</p>
+
+  <script>
+    btn.addEventListener('click', () => {
+      btn.disabled = true;
+
+      const start = new Date().getTime();
+      const end = input.value * 60 * 1000 + start;
+
+      let timer = setInterval(update, 1000);
+
+      update();
+
+      function update() {
+        const current = new Date().getTime();
+        let remaining = (end - current) / 1000;
+
+        if (remaining <= 0) {
+          clearInterval(timer);
+          btn.disabled = false;
+          output.textContent = 'Done!'
+        } else {
+          output.textContent = `${Math.floor(remaining / 60)}m ${Math.floor(remaining % 60)}s`;
+        }
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>
