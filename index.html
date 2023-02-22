@@ -2032,8 +2032,8 @@ var userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test( userAgent ),
     ios = /iphone|ipod|ipad/.test( userAgent );
 if( !ios ) {
-   document.body.style.backgroundColor = "transparent !important";
-   document.body.style.color = "#ffffff !important";
+	document.body.style.setProperty('background-color', 'transparent', 'important');
+	document.body.style.setProperty('color', '#ffffff', 'important');
 };
 </script> 
 
