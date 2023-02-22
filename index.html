@@ -594,7 +594,7 @@ V&#7908; </a></span></b><b><span style='font-size:10.0pt;line-height:110%;
 font-family:Mulish'>THÔNG MINH</span></b><b><span style='font-size:10.0pt;
 line-height:110%;font-family:Mulish'> </span></b><b><span style='font-size:
 10.0pt;line-height:110%;font-family:Mulish'>C&#7910;A </span></b><b><span
-lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VINFAST </span></b></p>
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VINFAST (TEST)</span></b></p>
 
 <p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
 font-family:Mulish'>&nbsp;</span></p>
@@ -2031,8 +2031,8 @@ font-family:Mulish'>&nbsp;</span></p>
 var userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test( userAgent ),
     ios = /iphone|ipod|ipad/.test( userAgent );
-console.log(userAgent);
-alert("userAgent": userAgent);
+console.log("userAgent", userAgent);
+console.log("ios": ios);
 if( !ios ) {
 	alert("Android");
    document.body.style.setProperty('background-color', 'transparent', 'important');
