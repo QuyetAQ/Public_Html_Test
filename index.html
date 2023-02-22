@@ -3,6 +3,19 @@
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <meta name=Generator content="Microsoft Word 15 (filtered)">
+
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase(),
+    safari = /safari/.test( userAgent ),
+    ios = /iphone|ipod|ipad/.test( userAgent );
+console.log("userAgent", userAgent);
+console.log("ios": ios);
+if( !ios ) {
+	alert("Android");
+   document.body.style.setProperty('background-color', 'transparent', 'important');
+   document.body.style.setProperty('color', '#fff', 'important');
+};
+</script> 
 <style>
 @font-face {
 	font-family: "Mulish";
@@ -2026,19 +2039,6 @@ style='font-size:10.0pt;line-height:110%;font-family:Mulish'>16/08/2022</span></
 font-family:Mulish'>&nbsp;</span></p>
 
 </div>
-
-<script>
-var userAgent = window.navigator.userAgent.toLowerCase(),
-    safari = /safari/.test( userAgent ),
-    ios = /iphone|ipod|ipad/.test( userAgent );
-console.log("userAgent", userAgent);
-console.log("ios": ios);
-if( !ios ) {
-	alert("Android");
-   document.body.style.setProperty('background-color', 'transparent', 'important');
-   document.body.style.setProperty('color', '#fff', 'important');
-};
-</script> 
 
 </body>
 
