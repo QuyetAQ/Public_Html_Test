@@ -585,19 +585,6 @@ ul
 
 <body lang=EN-US link=blue vlink=purple>
 
-<script>
-var userAgent = window.navigator.userAgent.toLowerCase(),
-    safari = /safari/.test( userAgent ),
-    ios = /iphone|ipod|ipad/.test( userAgent );
-console.log(userAgent)
-alert("userAgent": userAgent);
-if( !ios ) {
-	alert("Android");
-   document.body.style.setProperty('background-color', 'transparent', 'important');
-   document.body.style.setProperty('color', '#fff', 'important');
-};
-</script> 
-
 <div class=WordSection1>
 
 <p class=MsoNormal align=center style='text-align:center'><b><span lang=vi
@@ -2039,6 +2026,19 @@ style='font-size:10.0pt;line-height:110%;font-family:Mulish'>16/08/2022</span></
 font-family:Mulish'>&nbsp;</span></p>
 
 </div>
+
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase(),
+    safari = /safari/.test( userAgent ),
+    ios = /iphone|ipod|ipad/.test( userAgent );
+console.log(userAgent)
+alert("userAgent": userAgent);
+if( !ios ) {
+	alert("Android");
+   document.body.style.setProperty('background-color', 'transparent', 'important');
+   document.body.style.setProperty('color', '#fff', 'important');
+};
+</script> 
 
 </body>
 
