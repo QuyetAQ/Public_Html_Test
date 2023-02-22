@@ -2032,7 +2032,9 @@ var userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test( userAgent ),
     ios = /iphone|ipod|ipad/.test( userAgent );
 console.log(userAgent)
+	alert("userAgent": userAgent);
 if( !ios ) {
+	alert("Android");
    document.body.style.setProperty('background-color', 'transparent', 'important');
    document.body.style.setProperty('color', '#fff', 'important');
 };
