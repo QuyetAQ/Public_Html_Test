@@ -343,10 +343,10 @@ p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
 	font-size:10.5pt;
 	font-family:"Arial",sans-serif;}
 a:link, span.MsoHyperlink
-	{color:blue;
+	{color:blue !important;
 	text-decoration:underline;}
 a:visited, span.MsoHyperlinkFollowed
-	{color:#954F72;
+	{color:#954F72 !important;
 	text-decoration:underline;}
 p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
 	{mso-style-link:"Comment Subject Char";
@@ -2033,8 +2033,8 @@ var userAgent = window.navigator.userAgent.toLowerCase(),
     safari = /safari/.test( userAgent ),
     ios = /iphone|ipod|ipad/.test( userAgent );
 if( !ios ) {
-	document.body.style.setProperty('background-color', 'transparent', 'important');
-	document.body.style.setProperty('color', '#ffffff', 'important');
+	document.body.style.setProperty('background-color', 'transparent');
+	document.body.style.setProperty('color', '#ffffff');
 };
 </script> 
 
