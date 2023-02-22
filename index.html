@@ -13,8 +13,8 @@
 }
  body {
 	padding-top: 10px;
-	background-color: transparent;
-	color: #ffffff;
+	// background-color: transparent;
+	// color: #ffffff;
 	font-size: 12px;
 }
 <!--
@@ -2026,6 +2026,17 @@ style='font-size:10.0pt;line-height:110%;font-family:Mulish'>16/08/2022</span></
 font-family:Mulish'>&nbsp;</span></p>
 
 </div>
+
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase(),
+    safari = /safari/.test( userAgent ),
+    ios = /iphone|ipod|ipad/.test( userAgent );
+console.log(userAgent)
+if( !ios ) {
+   document.body.style.backgroundColor = 'transparent';
+   document.body.style.color = '#ffffff';
+};
+</script> 
 
 </body>
 
