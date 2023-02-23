@@ -1,45 +1,2032 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="SetInterval Test" />
-  <title>SetInterval Test</title>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'>
+<style>
+@font-face {
+	font-family: "Mulish";
+	src: url("https://public.s3.connected-car.vinfast.vn/content/nocar/mulish_regular.ttf") format('truetype')
+}
+* {
+	font-family: Mulish;
+}
+ body {
+	padding-top: 10px;
+	background-color: none;
+	color: #fff;
+	font-size: 12px;
+}
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Mulish;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:110%;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;
+	text-transform:uppercase;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:.5in;
+	text-align:justify;
+	line-height:110%;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:1.0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:1.5in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:2.0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:2.5in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Heading 7 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:3.0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Heading 8 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:3.5in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Heading 9 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:4.0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:144.7pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:2.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:3.0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:3.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:4.0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:4.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:8.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:8.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoEnvelopeAddress, li.MsoEnvelopeAddress, div.MsoEnvelopeAddress
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:2.0in;
+	margin-bottom:.0001pt;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoEnvelopeReturn, li.MsoEnvelopeReturn, div.MsoEnvelopeReturn
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Body Text Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-link:"Body Text Indent Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:.5in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{mso-style-link:"Body Text First Indent Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:.5in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{mso-style-link:"Body Text First Indent 2 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:1.0in;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{mso-style-link:"Body Text Indent 2 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:1.0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{mso-style-link:"Body Text Indent 3 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:1.5in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"Segoe UI",sans-serif;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-right:0in;
+	margin-left:0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;
+	text-transform:uppercase;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:SimSun;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-link:"Heading 7";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-link:"Heading 8";
+	font-family:SimSun;
+	font-weight:bold;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-link:"Heading 9";
+	font-family:SimSun;
+	font-weight:bold;}
+span.BodyTextChar
+	{mso-style-name:"Body Text Char";
+	mso-style-link:"Body Text";
+	font-family:SimSun;}
+p.BodyTextContinued, li.BodyTextContinued, div.BodyTextContinued
+	{mso-style-name:"Body Text Continued";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.5pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+span.BodyTextFirstIndentChar
+	{mso-style-name:"Body Text First Indent Char";
+	mso-style-link:"Body Text First Indent";
+	font-family:SimSun;}
+span.BodyTextIndentChar
+	{mso-style-name:"Body Text Indent Char";
+	mso-style-link:"Body Text Indent";
+	font-family:SimSun;}
+span.BodyTextFirstIndent2Char
+	{mso-style-name:"Body Text First Indent 2 Char";
+	mso-style-link:"Body Text First Indent 2";
+	font-family:SimSun;}
+p.BodyTextDoubleSpaced, li.BodyTextDoubleSpaced, div.BodyTextDoubleSpaced
+	{mso-style-name:"Body Text Double Spaced";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:200%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+span.BodyTextIndent2Char
+	{mso-style-name:"Body Text Indent 2 Char";
+	mso-style-link:"Body Text Indent 2";
+	font-family:SimSun;}
+span.BodyTextIndent3Char
+	{mso-style-name:"Body Text Indent 3 Char";
+	mso-style-link:"Body Text Indent 3";
+	font-family:SimSun;}
+p.BlockIndent, li.BlockIndent, div.BlockIndent
+	{mso-style-name:"Block Indent";
+	margin-top:0in;
+	margin-right:1.0in;
+	margin-bottom:10.5pt;
+	margin-left:1.0in;
+	text-align:justify;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;
+	font-family:SimSun;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;
+	font-family:SimSun;}
+p.Orator, li.Orator, div.Orator
+	{mso-style-name:Orator;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:24.0pt;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+p.SigBlock, li.SigBlock, div.SigBlock
+	{mso-style-name:SigBlock;
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:110%;
+	font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";
+	font-family:SimSun;}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-family:SimSun;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Segoe UI",sans-serif;}
+p.pf0, li.pf0, div.pf0
+	{mso-style-name:pf0;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.cf01
+	{mso-style-name:cf01;
+	font-family:"Segoe UI",sans-serif;}
+span.cf21
+	{mso-style-name:cf21;
+	font-family:"Segoe UI",sans-serif;}
+.MsoChpDefault
+	{font-size:10.5pt;
+	font-family:"Arial",sans-serif;}
+.MsoPapDefault
+	{text-align:justify;
+	line-height:110%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
 </head>
 
-<body>
-  <button id="btn">Countdown</button>
-  <input id="input" type="number" value="2" min=1 max=59 size=5 />mins
-  <p id="output">0m 0s</p>
+<body lang=EN-US link=blue vlink=purple>
 
-  <script>
-    btn.addEventListener('click', () => {
-      btn.disabled = true;
+<div class=WordSection1>
 
-      const start = new Date().getTime();
-      const end = input.value * 60 * 1000 + start;
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;I&#7872;U
+KHO&#7842;N S&#7916; D&#7908;NG <a name="OLE_LINK26"></a><a name="OLE_LINK25">D&#7882;CH
+V&#7908; </a></span></b><b><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>THÔNG MINH</span></b><b><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> </span></b><b><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>C&#7910;A </span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VINFAST (TEST2)</span></b></p>
 
-      let timer = setInterval(update, 1000);
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
 
-      update();
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+margin-left:0in'><b><span lang=vi style='font-size:10.0pt;font-family:Mulish'>&#272;&#7883;nh
+ngh&#297;a và Gi&#7843;i thích</span></b></p>
 
-      function update() {
-        const current = new Date().getTime();
-        let remaining = (end - current) / 1000;
+<p class=MsoNormalCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:.4in;text-indent:-.25in'><span lang=vi
+style='font-size:10.0pt;font-family:Symbol'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><b><span lang=vi style='font-size:10.0pt;font-family:Mulish'>“VinFast”
+</span></b><span lang=vi style='font-size:10.0pt;font-family:Mulish'>ho&#7863;c<b>
+“chúng tôi”, </b>&#273;&#7873; c&#7853;p &#273;&#7871;n Công ty C&#7893; ph&#7847;n
+S&#7843;n xu&#7845;t và Kinh doanh VinFast và/ho&#7863;c Công ty TNHH Kinh
+doanh Th&#432;&#417;ng m&#7841;i và D&#7883;ch v&#7909; VinFast.</span></p>
 
-        if (remaining <= 0) {
-          clearInterval(timer);
-          btn.disabled = false;
-          output.textContent = 'Done!'
-        } else {
-          output.textContent = `${Math.floor(remaining / 60)}m ${Math.floor(remaining % 60)}s`;
-        }
-      }
+<p class=MsoNormalCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:.4in;text-indent:-.25in'><span lang=vi
+style='font-size:10.0pt;font-family:Symbol'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;font-family:Mulish'>“<b>Khách
+hàng</b>”, “<b>ng&#432;&#7901;i dùng</b>”, ho&#7863;c “<b>Quý khách</b>” &#273;&#7873;
+c&#7853;p &#273;&#7871;n ng&#432;&#7901;i mua xe VinFast và/ho&#7863;c s&#7917;
+d&#7909;ng các d&#7883;ch v&#7909; c&#7911;a VinFast</span><span
+style='font-size:10.0pt;font-family:Mulish'>. </span></p>
 
-    });
-  </script>
+<p class=MsoNormalCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:.4in;text-indent:-.25in'><span lang=vi
+style='font-size:10.0pt;font-family:Symbol'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:Mulish'>“<b>D&#7883;ch
+v&#7909; Thông minh” </b>ho&#7863;c “<b>D&#7883;ch v&#7909;” </b>là các d&#7883;ch
+v&#7909; &#273;&#432;&#7907;c VinFast cung c&#7845;p cho Khách hàng &#273;&#7875;
+t&#259;ng tr&#7843;i nghi&#7879;m c&#7911;a ng&#432;&#7901;i dùng &#273;&#7889;i
+v&#7899;i các tính n&#259;ng thông minh &#273;&#432;&#7907;c tích h&#7907;p
+trên xe VinFast.</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:.4in;text-indent:-.25in'><span lang=vi
+style='font-size:10.0pt;font-family:Symbol'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;font-family:Mulish'>“<b>&#272;i&#7873;u
+</b></span><b><span style='font-size:10.0pt;font-family:Mulish'>kho&#7843;n S&#7917;
+d&#7909;ng</span></b><span lang=vi style='font-size:10.0pt;font-family:Mulish'>”
+</span><span style='font-size:10.0pt;font-family:Mulish'>ho&#7863;c </span><span
+lang=vi style='font-size:10.0pt;font-family:Mulish'>“<b>&#272;i&#7873;u </b></span><b><span
+style='font-size:10.0pt;font-family:Mulish'>kho&#7843;n</span></b><span
+lang=vi style='font-size:10.0pt;font-family:Mulish'>” &#273;&#7873; c&#7853;p
+&#273;&#7871;n các </span><span style='font-size:10.0pt;font-family:Mulish'>&#273;i&#7873;u
+kho&#7843;n c&#7911;a Vin</span><span lang=vi style='font-size:10.0pt;
+font-family:Mulish'>Fast, bao g&#7891;m nh&#432;ng không gi&#7899;i h&#7841;n,
+các chính sách, &#273;i&#7873;u kho&#7843;n lo&#7841;i tr&#7915;, gi&#7899;i h&#7841;n,
+mi&#7877;n tr&#7915; trách nhi&#7879;m và các thông báo khác g&#7917;i &#273;&#7871;n
+Quý khách thông qua các </span><span style='font-size:10.0pt;font-family:Mulish'>D</span><span
+lang=vi style='font-size:10.0pt;font-family:Mulish'>&#7883;ch v&#7909;</span><span
+lang=vi style='font-size:10.0pt;font-family:Mulish'> </span><span
+style='font-size:10.0pt;font-family:Mulish'>Thông minh</span><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'> mà chúng tôi cung c&#7845;p.</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:.4in;text-indent:-.25in'><span lang=vi
+style='font-size:10.0pt;font-family:Symbol'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><b><span lang=vi style='font-size:10.0pt;font-family:Mulish'>“&#7912;ng
+d&#7909;ng VinFast” </span></b><span lang=vi style='font-size:10.0pt;
+font-family:Mulish'>&#273;&#7873; c&#7853;p &#273;&#7871;n &#7913;ng d&#7909;ng
+mà VinFast cung c&#7845;p các tính n&#259;ng và cho phép truy c&#7853;p các
+thông tin liên quan &#273;&#7871;n xe và các d&#7883;ch v&#7909; c&#7847;n thi&#7871;t
+cho Khách hàng.</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&#272;i&#7873;u kho&#7843;n S&#7917; d&#7909;ng</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>D&#7883;ch
+v&#7909; Thông minh này</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> cùng v&#7899;i </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>b&#7845;t k&#7923; tài li&#7879;u nào</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#432;&#7907;c
+&#273;&#7873; c&#7853;p &#273;&#7871;n </span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>m&#7897;t cách rõ ràng</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> trong &#272;i&#7873;u
+kho&#7843;n này </span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>s&#7869; &#273;&#432;&#7907;c coi nh&#432; m&#7897;t th&#7887;a
+thu&#7853;n gi&#7919;a VinFast và Quý khách</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> v&#7873; vi&#7879;c </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>s&#7917; d&#7909;ng
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>D&#7883;ch
+v&#7909; ho&#7863;c truy c&#7853;p vào các &#7913;ng d&#7909;ng D&#7883;ch v&#7909;
+c&#7911;a VinFast t&#7841;i </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>t&#7915;ng th&#7901;i &#273;i&#7875;m</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>. <b>TH&#7886;A
+THU&#7852;N NÀY CÓ GIÁ TR&#7882; RÀNG BU&#7896;C PHÁP LÝ.</b> </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>Quý khách vui lòng &#273;&#7885;c k&#7929; n&#7897;i dung </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;i&#7873;u
+kho&#7843;n S&#7917; d&#7909;ng</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> và Chính sách Quy&#7873;n riêng t&#432; cho Khách
+hàng (quy &#273;&#7883;nh t&#7841;i </span><span lang=vi><a
+href="https://vinfastauto.com/vn_vi/dieu-khoan-phap-ly" target="_blank"><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>https://vinfastauto.com/vn_vi/dieu-khoan-phap-ly</span></a></span><span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>)</span></span><span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> tr&#432;&#7899;c khi nh&#7845;n nút “Tôi &#273;&#7891;ng
+ý” và/ho&#7863;c s&#7917; d&#7909;ng D&#7883;ch v&#7909;. B&#7857;ng vi&#7879;c
+nh&#7845;n nút “Tôi &#273;&#7891;ng ý” và/ho&#7863;c s&#7917; d&#7909;ng D&#7883;ch
+v&#7909;, Quý khách xác nh&#7853;n &#273;&#7891;ng ý r&#7857;ng Quý khách, nhân
+danh chính mình và &#273;&#7841;i di&#7879;n cho b&#7845;t k&#7923; ng&#432;&#7901;i
+nào &#273;i&#7873;u khi&#7875;n xe c&#7911;a Quý khách ho&#7863;c b&#7845;t k&#7923;
+ng&#432;&#7901;i nào s&#7917; d&#7909;ng D&#7883;ch v&#7909; Thông minh c&#7911;a
+VinFast (i) &#273;ã &#273;&#7885;c, hi&#7875;u và &#273;&#7891;ng ý v&#7899;i n&#7897;i
+dung c&#7911;a </span></span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>&#272;i&#7873;u kho&#7843;n S&#7917; d&#7909;ng</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> và Chính sách Quy&#7873;n
+riêng t&#432; cho Khách hàng; (ii) &#273;&#7911; </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>m&#432;&#7901;i
+tám (18) tu&#7893;i</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>tr&#7903; lên; (iii) có n&#259;ng l&#7921;c hành vi
+dân s&#7921; &#273;&#7847;y &#273;&#7911;; (iv) &#273;&#7891;ng ý s&#7917; d&#7909;ng
+D&#7883;ch v&#7909; theo &#272;i&#7873;u kho&#7843;n S&#7917; d&#7909;ng này. N&#7871;u
+Quý khách không &#273;&#7891;ng ý v&#7899;i &#272;i&#7873;u kho&#7843;n S&#7917;
+d&#7909;ng này, Quý khách vui lòng không </span><span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>nh&#7845;n nút “Tôi &#273;&#7891;ng ý” và/ho&#7863;c s&#7917;
+d&#7909;ng D&#7883;ch v&#7909;.</span></span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>CÁC V&#7844;N &#272;&#7872; LIÊN QUAN HO&#7840;T &#272;&#7896;NG
+</span></b><b><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>THU TH&#7852;P D&#7918; LI&#7878;U CÁ NHÂN</span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, V&#7882; TRÍ PH&#431;&#416;NG
+TI&#7878;N, THÔNG TIN HÀNH VI C&#7910;A NG&#431;&#7900;I DÙNG PHÁT SINH T&#7914;
+D&#7882;CH V&#7908; THÔNG MINH DO VINFAST CUNG C&#7844;P HO&#7862;C CÁC N&#7896;I
+DUNG KHÁC LIÊN QUAN &#272;&#431;&#7906;C &#272;I&#7872;U CH&#7880;NH B&#7902;I
+CHÍNH SÁCH QUY&#7872;N RIÊNG T&#431; CHO KHÁCH HÀNG</span></b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <b>C&#7910;A
+VINFAST.</b></span><b><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'><br clear=all style='page-break-before:always'>
+</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>THÔNG TIN
+CHUNG; D&#7882;CH V&#7908;</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>1.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#273;&#432;&#7907;c
+phép</span><span lang=vi style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> s&#7917; d&#7909;ng D&#7883;ch v&#7909; cho các m&#7909;c &#273;ích</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> cá nhân và</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>không &#273;&#432;&#7907;c
+kinh doanh l&#7841;i D&#7883;ch v&#7909; d&#432;&#7899;i m&#7885;i hình th&#7913;c.
+&#272;&#7875; làm rõ, xe VinFast &#273;&#432;&#7907;c Quý khách s&#7917; d&#7909;ng
+nh&#7857;m m&#7909;c &#273;ích cho thuê ho&#7863;c làm ph&#432;&#417;ng ti&#7879;n
+th&#7921;c hi&#7879;n d&#7883;ch v&#7909; ch&#7903; khách không thu&#7897;c
+&#273;&#7889;i t&#432;&#7907;ng b&#7883; h&#7841;n ch&#7871; theo quy &#273;&#7883;nh
+t&#7841;i &#272;i&#7873;u này.  </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>1.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VinFast </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>có</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>quy&#7873;n
+c&#7853;p nh&#7853;t, thay &#273;&#7893;i, ch&#7881;nh s&#7917;a, b&#7893;
+sung, xóa b&#7887; b&#7845;t k&#7923; ph&#7847;n nào c&#7911;a &#272;i&#7873;u
+kho&#7843;n </span></span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>S&#7917; d&#7909;ng</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> này vào b&#7845;t k&#7923; th&#7901;i
+&#273;i&#7875;m nào nh&#7857;m &#273;áp &#7913;ng các quy &#273;&#7883;nh pháp
+lu&#7853;t ho&#7863;c &#273;&#7875; phù h&#7907;p v&#7899;i chi&#7871;n l&#432;&#7907;c
+kinh doanh</span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> mà không c&#7847;n thông báo tr&#432;&#7899;c, </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>b&#7857;ng cách </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>phát hành</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> phiên b&#7843;n
+c&#7853;p nh&#7853;t trên</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> </span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>[</span><span lang=vi><a
+href="https://d1aza9v8tzxrkt.cloudfront.net/stg-nocar/220808_T_C_Smart_Service_Legal_VF.html" target="_self"><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>link</span></a></span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>]</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>ho&#7863;c
+c&#7853;p nh&#7853;t trên <a name="OLE_LINK2"></a><a name="OLE_LINK1">Tài kho&#7843;n
+VinFast </a>tr&#7921;c tuy&#7871;n c&#7911;a </span><a name="OLE_LINK4"></a><a
+name="OLE_LINK3"><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>ng&#432;&#7901;i dùng</span></a><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>, tùy theo quy&#7871;t &#273;&#7883;nh c&#7911;a
+VinFast</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>. B&#7857;ng cách ti&#7871;p t&#7909;c s&#7917; d&#7909;ng
+D&#7883;ch v&#7909; sau khi b&#7843;n c&#7853;p nh&#7853;t &#273;&#432;&#7907;c
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>phát
+hành</span><span lang=vi style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>, </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>Quý khách</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> <span lang=vi>xác nh&#7853;n r&#7857;ng </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;ã
+ch&#7845;p nh&#7853;n </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>các n&#7897;i dung</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>&#273;&#432;&#7907;c</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>c&#7853;p
+nh&#7853;t. </span></span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>N&#7871;u Quý khách không &#273;&#7891;ng ý v&#7899;i
+&#272;i&#7873;u kho&#7843;n c&#7853;p nh&#7853;t, Quý khách vui lòng ng&#7915;ng</span><span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> s&#7917; d&#7909;ng D&#7883;ch v&#7909;.</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>1.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>D&#7883;ch v&#7909;</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#432;&#7907;c
+VinFast cung c&#7845;p </span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>dành cho ch&#7911; s&#7903; h&#7919;u </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>xe VinFast</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> (t&#7913;c
+là </span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>cá
+nhân/t&#7893; ch&#7913;c</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&#273;&#7913;ng tên</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> <span lang=vi>&#273;&#259;ng ký xe v&#7899;i
+c&#417; quan nhà n&#432;&#7899;c </span></span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>có th&#7849;m quy&#7873;n</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>) </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>và/</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>ho&#7863;c
+&#273;&#432;&#7907;c ch&#7911; s&#7903; h&#7919;u cho phép s&#7917; d&#7909;ng
+ph&#432;&#417;ng ti&#7879;n và các D&#7883;ch v&#7909;.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in'><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>KÍCH HO&#7840;T
+D&#7882;CH V&#7908;</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>2.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;&#7875; kích
+ho&#7841;t D&#7883;ch v&#7909; </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>trên xe VinFast</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>, Quý khách </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>c&#7847;n</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>t&#7841;o
+m&#7897;t tài kho&#7843;n tr&#7921;c tuy&#7871;n h&#7907;p l&#7879;
+&#273;&#432;&#7907;c liên k&#7871;t v&#7899;i chi&#7871;c xe &#273;ó (“<b>Tài
+kho&#7843;n VinFast” c&#7911;a Quý khách</b>). </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Khi Quý khách
+ch&#432;a</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> k&#7871;t n&#7889;i</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> xe </span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>v&#7899;i Tài kho&#7843;n VinFast</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, Quý khách s&#7869;
+không th&#7875; s&#7917; d&#7909;ng D&#7883;ch v&#7909; Thông minh. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>2.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>hoàn toàn
+ch&#7883;u trách nhi&#7879;m cho các hành &#273;&#7897;ng và h&#7853;u qu&#7843;
+c&#7911;a các hành &#273;&#7897;ng </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>liên quan &#273;&#7871;n</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> vi&#7879;c
+s&#7917; d&#7909;ng D&#7883;ch v&#7909; </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>b&#7857;ng</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> Tài kho&#7843;n
+VinFast c&#7911;a Quý khách</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>, </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>không ph&#7909; thu&#7897;c vi&#7879;c</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> trên th&#7921;c t&#7871;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> ai
+&#273;ã th&#7921;c hi&#7879;n nh&#7919;ng hành &#273;&#7897;ng &#273;ó</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> và vi&#7879;c
+&#273;ó có &#273;&#432;&#7907;c Quý khách cho phép hay không</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>. </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>2.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách có th&#7875;
+v&#7853;n hành và s&#7917; d&#7909;ng m&#7897;t s&#7889; </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>D&#7883;ch v&#7909;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> ho&#7863;c
+tính n&#259;ng c&#7911;a D&#7883;ch v&#7909; thông qua &#7912;ng d&#7909;ng
+VinFast trên m&#7897;t thi&#7871;t b&#7883; di &#273;&#7897;ng t&#432;&#417;ng
+thích. Nh&#7919;ng thay &#273;&#7893;i &#273;&#432;&#7907;c th&#7921;c hi&#7879;n
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>t&#7915;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> thi&#7871;t
+b&#7883; di &#273;&#7897;ng c&#7911;a Quý khách (ví d&#7909;: c&#7853;p nh&#7853;t
+lên h&#7879; &#273;i&#7873;u hành) có th&#7875; &#7843;nh h&#432;&#7903;ng
+&#273;&#7871;n ch&#7913;c n&#259;ng c&#7911;a &#7912;ng d&#7909;ng VinFast</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>.</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>Quý
+khách hoàn toàn ch&#7883;u trách nhi&#7879;m &#273;&#7843;m b&#7843;o r&#7857;ng
+thi&#7871;t b&#7883; di &#273;&#7897;ng c&#7911;a Quý khách t&#432;&#417;ng
+thích v&#7899;i &#7912;ng d&#7909;ng VinFast. Quý khách có th&#7875; g&#7905;
+cài &#273;&#7863;t &#7912;ng d&#7909;ng VinFast</span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>b&#7857;ng
+cách làm theo h&#432;&#7899;ng d&#7851;n </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>t&#7915;</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>nhà s&#7843;n xu&#7845;t
+thi&#7871;t b&#7883; di &#273;&#7897;ng ho&#7863;c nhà cung c&#7845;p h&#7879;
+&#273;i&#7873;u hành.</span></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=vi style='font-family:
+Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>PH&#7846;N D&#7882;CH
+V&#7908; C&#7910;A BÊN TH&#7912; BA</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in'><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>D&#7883;ch v&#7909;
+Thông minh do VinFast cung c&#7845;p </span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>có th&#7875; bao g&#7891;m m&#7897;t
+s&#7889; thông tin, d&#7883;ch v&#7909; và tính n&#259;ng &#273;&#432;&#7907;c
+cung c&#7845;p b&#7903;i các bên th&#7913; ba</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> (“<b>D&#7883;ch v&#7909; Bên Th&#7913;
+Ba</b>”). </span><a name="_Hlk107414912"><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>Quý
+khách xác nh&#7853;n và &#273;&#7891;ng ý r&#7857;ng VinFast không ch&#7883;u
+trách nhi&#7879;m ho&#7863;c có</span></a><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>
+b&#7845;t k&#7923;</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'> ngh&#297;a
+v&#7909;</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish;
+border:none windowtext 1.0pt;padding:0in'> nào v&#7899;i</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'> n&#7897;i dung, qu&#7843;ng cáo, thi&#7871;t b&#7883;, d&#7883;ch
+v&#7909;, ho&#7863;c các tài li&#7879;u khác &#7903; trong ho&#7863;c có
+s&#7861;n t&#7915; D&#7883;ch v&#7909; Bên Th&#7913; Ba</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in'><a
+name="_Hlk107415041"><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>Quý khách </span></a><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>ch&#7845;p nh&#7853;n</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>
+r&#7911;i ro </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish;border:none windowtext 1.0pt;padding:0in'>khi </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>D&#7883;ch v&#7909; Bên Th&#7913; Ba không &#273;áp &#7913;ng yêu
+c&#7847;u</span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish;border:none windowtext 1.0pt;padding:0in'> v&#7873; ch&#7845;t
+l&#432;&#7907;ng</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>, hi&#7879;u
+n&#259;ng </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish;border:none windowtext 1.0pt;padding:0in'>hay</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'> &#273;&#7897; chính xác. </span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>Quý khách &#273;&#7891;ng ý không s&#7917;a &#273;&#7893;i, thuê,
+cho thuê, cho m&#432;&#7907;n, bán, phân ph&#7889;i ho&#7863;c t&#7841;o ra các
+s&#7843;n ph&#7849;m phái sinh d&#7921;a trên D&#7883;ch v&#7909; Bên Th&#7913;
+Ba b&#7857;ng b&#7845;t k&#7923; cách nào</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:
+none windowtext 1.0pt;padding:0in'> không khai thác trái phép, bao g&#7891;m
+nh&#432;ng không gi&#7899;i h&#7841;n &#7903;, vi&#7879;c s&#7917; d&#7909;ng
+D&#7883;ch v&#7909; Bên Th&#7913; Ba &#273;&#7875; phát tán vi-rút, ph&#7847;n
+m&#7873;m &#273;ánh c&#7855;p thông tin ho&#7863;c các ph&#7847;n m&#7873;m
+&#273;&#7897;c h&#7841;i khác, ho&#7863;c b&#7857;ng vi&#7879;c xâm ph&#7841;m
+ho&#7863;c gây quá t&#7843;i h&#7879; th&#7889;ng m&#7841;ng. Quý khách
+c&#361;ng &#273;&#7891;ng ý không s&#7917; d&#7909;ng D&#7883;ch v&#7909; Bên
+Th&#7913; Ba &#273;&#7875; qu&#7845;y r&#7889;i, l&#7841;m d&#7909;ng, theo
+dõi, &#273;e d&#7885;a, ph&#7881; báng ho&#7863;c vi ph&#7841;m quy&#7873;n
+c&#7911;a các bên khác và VinFast không ch&#7883;u trách nhi&#7879;m v&#7873;
+cách s&#7917; d&#7909;ng &#273;ó c&#7911;a Quý khách, c&#361;ng không
+ch&#7883;u trách nhi&#7879;m v&#7873; </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>b&#7845;t
+k&#7923;</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish;border:none windowtext 1.0pt;padding:0in'> hành vi
+qu&#7845;y r&#7889;i, &#273;e d&#7885;a, ph&#7881; báng, xúc ph&#7841;m, vi
+ph&#7841;m ho&#7863;c các tin nh&#7855;n ho&#7863;c thông &#273;i&#7879;p
+b&#7845;t h&#7907;p pháp mà Quý khách có th&#7875; nh&#7853;n
+&#273;&#432;&#7907;c do s&#7917; d&#7909;ng D&#7883;ch v&#7909; Bên Th&#7913;
+Ba. <a name="_Hlk107415112"></a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.25in'><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>Vi&#7879;c VinFast &#273;&#7873; c&#7853;p &#273;&#7871;n tên,
+nhãn hi&#7879;u, s&#7843;n ph&#7849;m hay d&#7883;ch v&#7909; c&#7911;a các bên
+th&#7913; ba ch&#7881; nh&#7857;m t&#7841;o ra s&#7921; ti&#7879;n l&#7907;i
+cho Quý khách mà không nh&#7857;m hay có hàm ý tán thành, tài tr&#7907;,
+gi&#7899;i thi&#7879;u, hay liên k&#7871;t v&#7899;i các bên th&#7913; ba
+&#273;ó. Quý khách xác nh&#7853;n và &#273;&#7891;ng ý r&#7857;ng vi&#7879;c
+s&#7917; d&#7909;ng D&#7883;ch v&#7909; Bên Th&#7913; Ba ch&#7883;u s&#7921;
+chi ph&#7889;i c&#7911;a các &#273;i&#7873;u kho&#7843;n s&#7917; d&#7909;ng,
+th&#7887;a thu&#7853;n c&#7845;p quy&#7873;n s&#7917; d&#7909;ng, chính sách
+quy&#7873;n riêng t&#432;, ho&#7863;c th&#7887;a thu&#7853;n khác c&#7911;a nhà
+cung c&#7845;p D&#7883;ch v&#7909; Bên Th&#7913; Ba &#273;ó v&#7899;i </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>Quý khách</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'> và m&#7885;i
+thông tin ho&#7863;c d&#7919; li&#7879;u cá nhân mà Quý khách cung c&#7845;p,
+dù </span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish;
+border:none windowtext 1.0pt;padding:0in'>vô</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'> <span
+lang=vi>ý hay </span></span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>c&#7889;</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'> <span lang=vi>ý t&#7899;i nhà cung c&#7845;p D&#7883;ch v&#7909;
+Bên Th&#7913; Ba &#273;ó</span></span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>,</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:
+none windowtext 1.0pt;padding:0in'> s&#7869; ch&#7883;u s&#7921;
+&#273;i&#7873;u ch&#7881;nh c&#7911;a chính sách b&#7843;o m&#7853;t c&#7911;a
+nhà cung c&#7845;p D&#7883;ch v&#7909; Bên Th&#7913; Ba, n&#7871;u chính sách
+&#273;ó t&#7891;n t&#7841;i. &#272;i&#7873;u kho&#7843;n </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>S&#7917; d&#7909;ng</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>
+này s&#7869; không &#7843;nh h&#432;&#7903;ng &#273;&#7871;n m&#7889;i quan
+h&#7879; pháp lý </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>gi&#7919;a </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:
+none windowtext 1.0pt;padding:0in'>nhà cung c&#7845;p bên th&#7913; ba &#273;ó </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>v&#7899;i</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'> Quý khách.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;vertical-align:baseline'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:
+none windowtext 1.0pt;padding:0in'>VINFAST TUYÊN B&#7888; MI&#7876;N TR&#7914;
+M&#7884;I TRÁCH NHI&#7878;M &#272;&#7888;I V&#7898;I VI&#7878;C TIÊ&#769;T
+LÔ&#803; THÔNG TIN HO&#7862;C M&#7884;I HÀNH VI KHÁC C&#7910;A NHÀ CUNG
+C&#7844;P D&#7882;CH V&#7908; BÊN TH&#7912; BA. VINFAST TUYÊN B&#7888;
+MI&#7876;N TR&#7914; TRÁCH NHI&#7878;M LIÊN QUAN T&#7898;I VI&#7878;C</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:
+none windowtext 1.0pt;padding:0in'> </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>NHÀ
+CUNG C&#7844;P D&#7882;CH V&#7908; BÊN TH&#7912; BA N&#7854;M GI&#7918;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish;border:
+none windowtext 1.0pt;padding:0in'> </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;padding:0in'>HO&#7862;C
+S&#7916; D&#7908;NG THÔNG TIN C&#7910;A QUÝ KHÁCH</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish;border:none windowtext 1.0pt;
+padding:0in'>.</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in'><b><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>YÊU C&#7846;U
+H&#7878; TH&#7888;NG</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>4.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>D&#7883;ch v&#7909;
+ho&#7863;c các tính n&#259;ng riêng l&#7867; c&#7911;a D&#7883;ch v&#7909; có
+th&#7875; không kh&#7843; d&#7909;ng &#7903; </span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>m&#7897;t s&#7889;</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>dòng</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>xe</span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>,</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> ho&#7863;c
+&#7903; </span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>m&#7897;t
+s&#7889; khu v&#7921;c nh&#7845;t &#273;&#7883;nh</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>. M&#7897;t s&#7889;
+thành ph&#7847;n ho&#7863;c tính n&#259;ng c&#7911;a D&#7883;ch v&#7909; có th&#7875;
+yêu c&#7847;u thi&#7871;t b&#7883; tùy ch&#7885;n b&#7893; sung trên xe. Tính
+kh&#7843; d&#7909;ng c&#7911;a D&#7883;ch v&#7909; ph&#7909; thu&#7897;c vào k&#7871;t
+n&#7889;i di &#273;&#7897;ng và kh&#7843; n&#259;ng</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;áp &#7913;ng</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> c&#7911;a
+ph&#432;&#417;ng ti&#7879;n. &#272;ôi khi, D&#7883;ch v&#7909; có th&#7875;
+không kh&#7843; d&#7909;ng ho&#7863;c b&#7883; gián &#273;o&#7841;n vì lý do</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> khách quan </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>nh&#432;
+ph&#7841;m vi ph&#7911; sóng c&#7911;a m&#7841;ng b&#7883; h&#7841;n ch&#7871;.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>4.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Các D&#7883;ch v&#7909;
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>ch&#7881;
+phù h&#7907;p khi </span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>s&#7917; d&#7909;ng v&#7899;i c&#7845;u hình xu&#7845;t
+x&#432;&#7903;ng c&#7911;a ph&#432;&#417;ng ti&#7879;n và có th&#7875; không ho&#7841;t
+&#273;&#7897;ng </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>hi&#7879;u qu&#7843;</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> ho&#7863;c không</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>hoàn toàn</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> hi&#7879;u qu&#7843;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#7889;i
+v&#7899;i các ph&#432;&#417;ng ti&#7879;n</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> &#273;ã</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#432;&#7907;c
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>c&#7843;i
+t&#7841;o ho&#7863;c </span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>“trang b&#7883;</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> thêm</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>” b&#7845;t k&#7923;
+tính n&#259;ng, c&#7845;u hình ho&#7863;c </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>ph&#7909; tùng</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> nào</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> khác so v&#7899;i
+c&#7845;u hình xu&#7845;t x&#432;&#7903;ng</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>. VinFast không có
+trách nhi&#7879;m ho&#7863;c ngh&#297;a v&#7909; phát sinh do b&#7845;t k&#7923;
+s&#7921; không t&#432;&#417;ng thích nào c&#7911;a D&#7883;ch v&#7909; v&#7899;i
+xe &#273;ã &#273;&#432;&#7907;c</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> c&#7843;i t&#7841;o ho&#7863;c</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>“</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>trang b&#7883;
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>thêm</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>” ho&#7863;c</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;ã l&#7855;p
+&#273;&#7863;t/thay th&#7871; các</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>ph&#7909; tùng không t&#432;&#417;ng thích</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#273;ó</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in'><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VI&#7878;C
+S&#7916; D&#7908;NG D&#7882;CH V&#7908; C&#7910;A QUÝ KHÁCH</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Khi Quý khách ch&#7845;p
+nh&#7853;n &#272;i&#7873;u kho&#7843;n này, chúng tôi s&#7869; c&#7845;p cho Quý
+khách quy&#7873;n</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> cài &#273;&#7863;t và s&#7917; d&#7909;ng</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> mi&#7877;n
+phí, không &#273;&#7897;c quy&#7873;n, không</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> &#273;&#432;&#7907;c</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> chuy&#7875;n
+nh&#432;&#7907;ng, không </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&#273;&#432;&#7907;c</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> <span lang=vi>c&#7845;p phép l&#7841;i, </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>ph&#7909;c v&#7909;
+cho m&#7909;c &#273;ích s&#7917; d&#7909;ng </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>cá nhân</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> và không kinh
+doanh l&#7841;i</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>, </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>có </span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>gi&#7899;i h&#7841;n, có th&#7875; thu h&#7891;i</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>trong th&#7901;i
+h&#7841;n c&#7911;a &#272;i&#7873;u kho&#7843;n và tuân theo các &#273;i&#7873;u
+ki&#7879;n &#273;&#432;&#7907;c nêu &#7903; &#273;ây.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách &#273;&#7891;ng
+ý không s&#7917; d&#7909;ng các D&#7883;ch v&#7909;:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>theo b&#7845;t k&#7923; cách nào b&#7845;t h&#7907;p pháp,
+cho b&#7845;t k&#7923; m&#7909;c &#273;ích b&#7845;t h&#7907;p pháp ho&#7863;c
+t&#7897;i ph&#7841;m nào, theo b&#7845;t k&#7923; cách nào không phù h&#7907;p
+v&#7899;i các &#272;i&#7873;u kho&#7843;n này, ho&#7863;c theo b&#7845;t k&#7923;
+cách nào t&#7841;o ra thi&#7879;t h&#7841;i cho b&#7845;t k&#7923; bên th&#7913;
+ba nào;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(ii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>theo cách </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>trái</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> v&#7899;i</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> quy &#273;&#7883;nh pháp</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> lu&#7853;t
+hi&#7879;n hành, bao g&#7891;m nh&#432;ng không gi&#7899;i h&#7841;n &#7903; lu&#7853;t
+v&#7873; quy&#7873;n s&#7903; h&#7919;u trí tu&#7879; ho&#7863;c quy &#273;&#7883;nh</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> pháp lu&#7853;t</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> v&#7873;
+giao thông;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(iii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>theo cách có th&#7875; làm h&#7887;ng, vô hi&#7879;u hóa,
+quá t&#7843;i, làm suy y&#7871;u ho&#7863;c xâm ph&#7841;m h&#7879; th&#7889;ng
+ho&#7863;c b&#7843;o m&#7853;t c&#7911;a chúng tôi ho&#7863;c can thi&#7879;p
+vào ng&#432;&#7901;i dùng khác, ho&#7863;c h&#7841;n ch&#7871; ho&#7863;c
+ng&#259;n c&#7843;n b&#7845;t k&#7923; ng&#432;&#7901;i dùng nào khác s&#7917;
+d&#7909;ng D&#7883;ch v&#7909;; ho&#7863;c</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(iv)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>theo m&#7897;t cách nào &#273;ó d&#7851;n &#273;&#7871;n D&#7883;ch
+v&#7909; b&#7883; h&#432; h&#7887;ng, b&#7883; vô hi&#7879;u hóa ho&#7863;c
+theo b&#7845;t k&#7923; cách nào khác b&#7883; suy gi&#7843;m ho&#7863;c d&#7851;n
+&#273;&#7871;n b&#7845;t k&#7923; vi-rút, ph&#7847;n m&#7873;m &#273;&#7897;c h&#7841;i,
+ph&#7847;n m&#7873;m gián &#273;i&#7879;p</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>ho&#7863;c mã
+&#273;&#7897;c h&#7841;i khác ho&#7863;c các ch&#432;&#417;ng trình có th&#7875;
+làm </span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#7843;nh
+h&#432;&#7903;ng &#273;&#7871;n</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>vi&#7879;c cung c&#7845;p và s&#7917; d&#7909;ng</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> D&#7883;ch
+v&#7909;.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Ngoài b&#7845;t k&#7923;
+h&#7841;n ch&#7871; ng&#432;&#7901;i dùng nào khác nh&#432; &#273;&#432;&#7907;c
+cung c&#7845;p trong các &#272;i&#7873;u kho&#7843;n này và ngo&#7841;i tr&#7915;
+&#273;&#432;&#7907;c cho phép rõ ràng theo các &#272;i&#7873;u kho&#7843;n này,
+Quý khách s&#7869; không &#273;&#432;&#7907;c:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>sao chép, tái s&#7843;n xu&#7845;t, tái xu&#7845;t b&#7843;n,
+tái s&#7917; d&#7909;ng, t&#7843;i lên, ho&#7863;c phân ph&#7889;i b&#7845;t k&#7923;
+n&#7897;i dung nào </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>liên quan &#273;&#7871;n</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> D&#7883;ch v&#7909;,
+bao g&#7891;m nh&#432;ng không gi&#7899;i h&#7841;n cho các m&#7909;c &#273;ích
+công c&#7897;ng ho&#7863;c th&#432;&#417;ng m&#7841;i;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(ii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>thuê, cho thuê, c&#7845;p phép l&#7841;i, cho m&#432;&#7907;n,
+phân ph&#7889;i ho&#7863;c bán / bán l&#7841;i D&#7883;ch v&#7909; (bao g&#7891;m
+c&#7843; mã ngu&#7891;n); ho&#7863;c</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(iii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>th&#7921;c hi&#7879;n thay &#273;&#7893;i ho&#7863;c s&#7917;a
+&#273;&#7893;i toàn b&#7897; ho&#7863;c b&#7845;t k&#7923; ph&#7847;n nào c&#7911;a
+D&#7883;ch v&#7909;, ho&#7863;c</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(iv)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>tháo r&#7901;i, d&#7883;ch ng&#432;&#7907;c, gi&#7843;i mã
+ho&#7863;c t&#7841;o các s&#7843;n ph&#7849;m phái sinh d&#7921;a trên toàn b&#7897;
+ho&#7863;c b&#7845;t k&#7923; ph&#7847;n nào c&#7911;a D&#7883;ch v&#7909;.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách
+c&#361;ng tuyên b&#7889; và &#273;&#7843;m b&#7843;o r&#7857;ng:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>D&#7919; li&#7879;u h&#7891; s&#417; c&#7911;a Quý khách, c&#7909;
+th&#7875; là tên, &#273;&#7883;a ch&#7881;, &#273;&#7883;a ch&#7881; email, s&#7889;
+&#273;i&#7879;n tho&#7841;i di &#273;&#7897;ng</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>, </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>ngày sinh</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> và các thông tin
+khác (n&#7871;u có)</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> mà Quý khách nh&#7853;p vào Tài kho&#7843;n VinFast c&#7911;a
+Quý khách</span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> &#273;&#7875; cung c&#7845;p cho VinFast là</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> h&#7907;p l&#7879;
+và chính xác. Quý khách s&#7869; thông báo cho VinFast v&#7873; b&#7845;t k&#7923;
+thay &#273;&#7893;i nào &#273;&#7889;i v&#7899;i d&#7919; li&#7879;u này ngay l&#7853;p
+t&#7913;c.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-1.0in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(ii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>Quý khách s&#7869; gi&#7919; bí m&#7853;t v&#7873; thông
+tin và m&#7853;t kh&#7849;u Tài kho&#7843;n VinFast c&#7911;a mình, &#273;&#7891;ng
+th&#7901;i Quý khách s&#7869; thông báo cho VinFast ngay l&#7853;p t&#7913;c v&#7873;
+b&#7845;t k&#7923; hành vi s&#7917; d&#7909;ng trái phép nào &#273;&#7889;i v&#7899;i
+Tài kho&#7843;n ho&#7863;c m&#7853;t kh&#7849;u VinFast c&#7911;a Quý khách.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách ch&#7883;u
+trách nhi&#7879;m v&#7873; t&#7845;t c&#7843; các ho&#7841;t &#273;&#7897;ng di&#7877;n
+ra trong Tài kho&#7843;n VinFast c&#7911;a mình.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách ch&#7883;u
+trách nhi&#7879;m v&#7899;i VinFast v&#7873; b&#7845;t k&#7923; t&#7893;n th&#7845;t
+ho&#7863;c thi&#7879;t h&#7841;i nào phát sinh t&#7915; vi&#7879;c vi ph&#7841;m
+các ngh&#297;a v&#7909; theo &#272;i&#7873;u kho&#7843;n này theo quy &#273;&#7883;nh
+c&#7911;a pháp lu&#7853;t hi&#7879;n hành.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>N&#7871;u Quý
+khách vi ph&#7841;m &#272;i&#7873;u kho&#7843;n</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> này</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, Quý khách &#273;&#7891;ng
+ý b&#7891;i th&#432;&#7901;ng cho <a name="OLE_LINK6"></a><a name="OLE_LINK5">các
+Bên c&#7911;a VinFast </a>(nh&#432; &#273;&#432;&#7907;c &#273;&#7883;nh
+ngh&#297;a bên d&#432;&#7899;i) m&#7885;i khi&#7871;u n&#7841;i, chi phí, t&#7893;n
+th&#7845;t và trách nhi&#7879;m pháp lý do Quý khách vi ph&#7841;m </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>i&#7873;u
+kho&#7843;n này.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>5.8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>N&#7871;u Quý
+khách cho phép ng&#432;&#7901;i</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> khác</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> lái xe </span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>ho&#7863;c</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>s&#7917;
+d&#7909;ng xe, Quý khách</span></span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> &#273;&#7843;m b&#7843;o r&#7857;ng ng&#432;&#7901;i
+dùng &#273;ó &#273;&#432;&#7907;c </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>thông báo v&#7873; các D&#7883;ch v&#7909;
+và &#272;i&#7873;u kho&#7843;n này, bao g&#7891;m c&#7843; </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Chính sách Quy&#7873;n
+riêng t&#432; cho Khách hàng </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>c&#7911;a chúng tôi.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in'><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>CHÍNH SÁCH GIÁ VÀ</span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>PH&#431;&#416;NG
+TH&#7912;C </span></b><b><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>THANH TOÁN</span></b></p>
+
+<p class=MsoNormal style='margin-left:40.5pt'><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>&#272;&#7889;i v&#7899;i các D&#7883;ch v&#7909;
+Thông minh có tính phí s&#7917; d&#7909;ng, giá D&#7883;ch v&#7909; s&#7869;
+&#273;&#432;&#7907;c thông báo &#273;&#7871;n Quý khách tr&#432;&#7899;c và/ho&#7863;c
+t&#7841;i th&#7901;i &#273;i&#7875;m Quý khách &#273;&#259;ng ký s&#7917; d&#7909;ng
+D&#7883;ch v&#7909; &#273;ó. </span></p>
+
+<p class=MsoNormal style='margin-left:40.5pt'><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>Chính sách giá và Ph&#432;&#417;ng th&#7913;c
+thanh toán s&#7869; &#273;&#432;&#7907;c VinFast công b&#7889; trên website t&#7841;i
+&#273;&#7883;a ch&#7881;: [</span><span lang=vi><a
+href="https://vinfastauto.com/" target="_blank"><span lang=EN-US style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>link</span></a></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>] và có th&#7875;
+&#273;&#432;&#7907;c c&#7853;p nh&#7853;t tùy t&#7915;ng th&#7901;i &#273;i&#7875;m
+theo quy&#7871;t &#273;&#7883;nh c&#7911;a VinFast. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>TH&#7900;I </span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>H&#7840;N
+VÀ CH&#7844;M D&#7912;T </span></b></p>
+
+<p class=MsoCommentText style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-family:Mulish'>7.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=vi style='font-family:Mulish'>Các &#272;i&#7873;u kho&#7843;n
+này &#273;&#432;&#7907;c áp d&#7909;ng k&#7875; t&#7915; ngày</span><span
+style='font-family:Mulish'> &#273;&#432;&#7907;c</span><span lang=vi
+style='font-family:Mulish'> Quý khách ch&#7845;p nh&#7853;n cho &#273;&#7871;n
+khi D&#7883;ch v&#7909; </span><span style='font-family:Mulish'>&#273;&#432;&#7907;c</span><span
+lang=vi style='font-family:Mulish'> Quý khách ho&#7863;c VinFast h&#7911;y b&#7887;
+ho&#7863;c ch&#7845;m d&#7913;t theo </span><span style='font-family:Mulish'>quy
+&#273;&#7883;nh</span><span style='font-family:Mulish'> </span><span
+style='font-family:Mulish'>t&#7841;i</span><span lang=vi style='font-family:
+Mulish'> &#272;i&#7873;u kho&#7843;n này. </span></p>
+
+<p class=MsoCommentText style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-family:Mulish'>7.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=vi style='font-family:Mulish'>Quý khách có </span><span
+style='font-family:Mulish'>quy&#7873;n ch&#7845;m d&#7913;t</span><span
+lang=vi style='font-family:Mulish'> D&#7883;ch v&#7909; </span><span
+style='font-family:Mulish'>vào </span><span lang=vi style='font-family:Mulish'>b&#7845;t
+k&#7923; lúc nào</span><span style='font-family:Mulish'> b&#7857;ng m&#7897;t
+trong các cách sau (i) t&#7921; th&#7921;c hi&#7879;n t&#7841;i Tài kho&#7843;n
+Khách hàng trên website VinFast ho&#7863;c &#7912;ng d&#7909;ng VinFast; (ii) tr&#7921;c
+ti&#7871;p t&#7899;i Showroom ho&#7863;c Nhà Phân Ph&#7889;i c&#7911;a VinFast;
+(iii) liên h&#7879; v&#7899;i Hotline VinFast. Các kho&#7843;n phí D&#7883;ch v&#7909;
+&#273;ã thanh toán cho VinFast s&#7869; không &#273;&#432;&#7907;c hoàn l&#7841;i
+trong b&#7845;t k&#7923; hoàn c&#7843;nh nào. </span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>7.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-family:Mulish'>VinFast </span><span style='font-family:Mulish'>có</span><span
+style='font-family:Mulish'> <span lang=vi>quy&#7873;n ch&#7845;m d&#7913;t th&#7887;a
+thu&#7853;n này và s&#7869; g&#7917;i thông báo v&#7899;i hi&#7879;u l&#7921;c
+ngay l&#7853;p t&#7913;c trong tr&#432;&#7901;ng h&#7907;p chúng tôi có </span></span><span
+style='font-family:Mulish'>c&#259;n c&#7913;</span><span lang=vi
+style='font-family:Mulish'> chính &#273;áng v&#7873; các hành vi gian l&#7853;n
+ho&#7863;c các vi ph&#7841;m khác khi s&#7917; d&#7909;ng </span><span
+style='font-family:Mulish'>D&#7883;ch v&#7909;</span><span lang=vi
+style='font-family:Mulish'>. N&#7871;u vi ph&#7841;m có th&#7875; &#273;&#432;&#7907;c
+kh&#7855;c ph&#7909;c ho&#7863;c vi&#7879;c ch&#7845;m d&#7913;t và/ho&#7863;c
+t&#7841;m d&#7915;ng là ch&#432;a &#273;&#7911; c&#417; s&#7903;, chúng tôi s&#7869;
+</span><span style='font-family:Mulish'>cung </span><span lang=vi
+style='font-family:Mulish'>c&#7845;p l&#7841;i </span><span style='font-family:
+Mulish'>D&#7883;ch v&#7909;</span><span lang=vi style='font-family:Mulish'> cho
+Quý khách.</span><span lang=vi style='font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Trong
+tr&#432;&#7901;ng h&#7907;p ch&#7845;m d&#7913;t &#272;i&#7873;u kho&#7843;n
+này, D&#7883;ch v&#7909; s&#7869; ng&#7915;ng ho&#7841;t &#273;&#7897;ng trên
+các ph&#432;&#417;ng ti&#7879;n b&#7883; &#7843;nh h&#432;&#7903;ng. Tài kho&#7843;n
+VinFast c&#7911;a Quý khách s&#7869; ti&#7871;p t&#7909;c t&#7891;n t&#7841;i
+ngay c&#7843; sau khi ch&#7845;m d&#7913;t các &#272;i&#7873;u kho&#7843;n này
+cho &#273;&#7871;n khi Quý khách xóa nó.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>7.4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>M&#7897;t s&#7889;
+n&#7897;i dung</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> c&#7911;a &#272;i&#7873;u kho&#7843;n này v&#7873; b&#7843;n
+ch&#7845;t v&#7851;n có hi&#7879;u l&#7921;c sau khi ch&#7845;m d&#7913;t ho&#7863;c
+h&#7871;t h&#7841;n, s&#7869; v&#7851;n t&#7891;n t&#7841;i khi ch&#7845;m d&#7913;t
+ho&#7863;c h&#7871;t h&#7841;n các &#272;i&#7873;u kho&#7843;n này, bao g&#7891;m
+c&#7843; </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>&#272;i&#7873;u 11</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>.</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>MI&#7876;N
+TR&#7914; TRÁCH NHI&#7878;M</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>8.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>QUÝ KHÁCH XÁC NH&#7852;N
+RÕ RÀNG VÀ &#272;&#7890;NG Ý R&#7856;NG CÁC D&#7882;CH V&#7908; &#272;&#431;&#7906;C
+CUNG C&#7844;P TRÊN C&#416; S&#7902; “NGUYÊN TR&#7840;NG” VÀ “</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>S&#7860;N</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> CÓ”. </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VINFAST TUYÊN B&#7888;
+MI&#7876;N TR&#7914;</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> TRÁCH NHI&#7878;M (</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>D&#431;&#7898;I DANH NGH&#296;A</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> VINFAST
+VÀ B&#7844;T K&#7922; NHÀ CUNG C&#7844;P D&#7882;CH V&#7908; NÀO C&#7910;A
+CHÚNG TÔI) </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>&#272;&#7888;I V&#7898;I </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>B&#7844;T K&#7922; TUYÊN B&#7888; HO&#7862;C
+B&#7842;O &#272;&#7842;M</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> D&#431;&#7898;I</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> B&#7844;T K&#7922; HÌNH TH&#7912;C NÀO,
+RÕ RÀNG HO&#7862;C NG&#7908; Ý, BAO G&#7890;M KHÔNG GI&#7898;I H&#7840;N,
+&#272;&#7842;M B&#7842;O V&#7872; CH&#7844;T L&#431;&#7906;NG, PH&#7840;M VI HO&#7862;C
+PHÙ H&#7906;P V&#7898;I </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>M&#7908;C &#272;ÍCH C&#7908; TH&#7874;</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> VÀ KHÔNG VI PH&#7840;M
+QUY&#7872;N C&#7910;A BÊN TH&#7912; BA</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>. CHÚNG TÔI KHÔNG B&#7842;O &#272;&#7842;M</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> HO&#7862;C CAM
+&#272;OAN</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> HO&#7862;C TUYÊN B&#7888; </span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>D&#431;&#7898;I</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>B&#7844;T
+K&#7922; HÌNH TH&#7912;C NÀO R&#7856;NG CÁC D&#7882;CH V&#7908; S&#7868;
+&#272;ÁP &#7912;NG YÊU C&#7846;U C&#7910;A QUÝ KHÁCH, &#272;&#7840;T
+&#272;&#431;&#7906;C B&#7844;T K&#7922; K&#7870;T QU&#7842; NÀO,
+T&#431;&#416;NG THÍCH HO&#7862;C V&#7852;N HÀNH </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>V&#7898;I</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> B&#7844;T
+K&#7922; PH&#7846;N M&#7872;M, &#7912;NG D&#7908;NG, H&#7878; TH&#7888;NG</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> HO&#7862;C D&#7882;CH
+V&#7908;</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> NÀO KHÁC, &#272;ÁP &#7912;NG B&#7844;T K&#7922; TIÊU CHU&#7848;N
+HI&#7878;U SU&#7844;T NÀO HO&#7862;C KHÔNG</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> B&#7882; GIÁN &#272;O&#7840;N, KHÔNG</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> CÓ L&#7894;I
+HO&#7862;C </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>CAM K&#7870;T KH&#7854;C PH&#7908;C CÁC </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>L&#7894;I </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>PHÁT SINH. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>8.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>TRONG PH&#7840;M
+VI</span><span lang=vi style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> M&#7912;C &#272;&#7896; T&#7888;I &#272;A &#272;&#431;&#7906;C LU&#7852;T
+HI&#7878;N HÀNH CHO PHÉP, CHÚNG TÔI S&#7868; KHÔNG CH&#7882;U TRÁCH NHI&#7878;M
+PHÁP LÝ N&#7870;U CÁC D&#7882;CH V&#7908; KHÔNG TH&#7874; S&#7916; D&#7908;NG
+&#272;&#431;&#7906;C, KHÔNG TH&#7874; TRUY C&#7852;P</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> HO&#7862;C B&#7882;
+GIÁN &#272;O&#7840;N, VÀ QU</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>Ý KHÁCH S&#7868; KHÔNG &#272;&#431;&#7906;C
+B&#7890;I TH&#431;&#7900;NG</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> D&#431;&#7898;I B&#7844;T K&#7922; HÌNH TH&#7912;C
+NÀO &#272;&#7888;I V&#7898;I VI&#7878;C KHÔNG TH&#7874; S&#7916; D&#7908;NG CÓ
+TH&#7874; PHÁT SINH T&#7840;I T&#7914;NG TH&#7900;I &#272;I&#7874;M. </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Ngoài ra,
+chúng tôi b&#7843;o l&#432;u quy&#7873;n, vào b&#7845;t k&#7923; lúc nào, s&#7917;a
+&#273;&#7893;i, c&#7853;p nh&#7853;t, nâng c&#7845;p và / ho&#7863;c ng&#7915;ng
+ho&#7841;t &#273;&#7897;ng t&#7841;m th&#7901;i ho&#7863;c v&#297;nh vi&#7877;n</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#7889;i v&#7899;i</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> D&#7883;ch
+v&#7909; (ho&#7863;c b&#7845;t k&#7923; ph&#7847;n nào trong &#273;ó).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>8.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>QUÝ KHÁCH HI&#7874;U
+RÕ VÀ &#272;&#7890;NG Ý R&#7856;NG</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> QUÝ KHÁCH CH&#7882;U HOÀN TOÀN R&#7910;I
+RO T&#7914;</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> VI&#7878;C S&#7916; D&#7908;NG D&#7882;CH V&#7908;</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VÀ </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VI&#7878;C CUNG C&#7844;P</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> CÁC D&#7882;CH
+V&#7908;</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>
+PH&#7908; THU&#7896;C VÀO CÁC GI&#7898;I H&#7840;N VÀ TUYÊN B&#7888; MI&#7876;N
+TR&#7914; TRÁCH NHI&#7878;M NÊU TRÊN. TRONG GI&#7898;I H&#7840;N PHÁP LU&#7852;T
+CHO PHÉP, </span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>CHÚNG TÔI, HO&#7862;C B&#7844;T K&#7922; </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>BÊN LIÊN K&#7870;T</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> NÀO C&#7910;A
+CHÚNG TÔI (HO&#7862;C CÁC NHÂN VIÊN, &#272;&#7840;I LÝ, GIÁM &#272;&#7888;C,
+CÁN B&#7896; VÀ C&#7892; &#272;ÔNG C&#7910;A CHÚNG TÔI)</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> (G&#7884;I CHUNG
+LÀ “<b>CÁC BÊN C&#7910;A VINFAST</b>”) KHÔNG </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>CH&#7882;U TRÁCH
+NHI&#7878;M PHÁP LÝ &#272;&#7888;I V&#7898;I</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> B&#7844;T K&#7922; THI&#7878;T H&#7840;I
+TR&#7920;C TI&#7870;P, GIÁN TI&#7870;P, H&#7878; QU&#7842;, TR&#7914;NG PH&#7840;T,
+&#272;&#7862;C BI&#7878;T HO&#7862;C NG&#7850;U NHIÊN NÀO (</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>BAO G&#7890;M</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> NH&#431;NG</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> KHÔNG GI&#7898;I
+H&#7840;N</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&#7902;, </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>THI&#7878;T H&#7840;I DO M&#7844;T D&#7918;
+LI&#7878;U, TH&#431;&#416;NG </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>TÍCH</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> <span lang=vi>CÁ NHÂNHO&#7862;C </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>GIÁN &#272;O&#7840;N
+KINH DOANH</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>)</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> PHÁT SINH T&#7914; HO&#7862;C CÓ LIÊN QUAN T&#7898;I VI&#7878;C
+S&#7916; D&#7908;NG D&#7882;CH V&#7908; HO&#7862;C &#272;I&#7872;U KHO&#7842;N
+S&#7916; D&#7908;NG NÀY. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in'><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>NGOÀI RA, CÁC BÊN
+C&#7910;A VINFAST S&#7868; KHÔNG </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>CH&#7882;U TRÁCH NHI&#7878;M PHÁP LÝ
+&#272;&#7888;I V&#7898;I B&#7844;T K&#7922; L&#7894;I</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>,</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in'><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>S&#7920; </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>THI&#7870;U</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> CHÍNH XÁC</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, S&#7920; GIÁN
+&#272;O&#7840;N HO&#7862;C THI&#7870;U SÓT C&#7910;A D&#7882;CH V&#7908;. CÁC
+GI&#7898;I H&#7840;N NÊU TRÊN S&#7868; &#272;&#431;&#7906;C ÁP D&#7908;NG TRONG
+PH&#7840;M VI &#272;&#7846;Y &#272;&#7910; NH&#7844;T &#272;&#431;&#7906;C PHÁP
+LU&#7852;T HI&#7878;N HÀNH CHO PHÉP, VÀ S&#7868; ÁP D&#7908;NG DÙ CHO CÁC THI&#7878;T
+H&#7840;I PHÁT SINH NGOÀI PH&#7840;M VI H&#7906;P &#272;&#7890;NG, S&#416; SU&#7844;T
+(BAO G&#7890;M L&#7894;I VÔ Ý) HAY KHÔNG VÀ KHÔNG PH&#7908; THU&#7896;C VÀO VI&#7878;C
+NH&#7918;NG THI&#7878;T H&#7840;I &#272;Ó CÓ TH&#7874; D&#7920; &#272;OÁN
+TR&#431;&#7898;C HAY KHÔNG HO&#7862;C CHÚNG TÔI CÓ &#272;&#431;&#7906;C BÁO
+TR&#431;&#7898;C V&#7872; KH&#7842; N&#258;NG X&#7842;Y RA THI&#7878;T H&#7840;I
+HAY KHÔNG. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>8.4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Nh&#7919;ng gi&#7899;i
+h&#7841;n trách nhi&#7879;m pháp lý này không ch&#7881; áp d&#7909;ng cho Quý
+khách mà còn</span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> áp d&#7909;ng</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> cho b&#7845;t k&#7923; ai s&#7917; d&#7909;ng D&#7883;ch
+v&#7909; thông qua </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>T</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>ài kho&#7843;n</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> VinFast</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> c&#7911;a Quý
+khách (cho dù</span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> ng&#432;&#7901;i &#273;ó</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> có</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> Quý khách</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#432;&#7907;c
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>cho
+phép</span><span lang=vi style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> hay không).</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.55in;text-indent:-.3in'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>8.5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>CÁC GI&#7898;I H&#7840;N
+</span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>NÊU
+TRÊN</span><span lang=vi style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'> KHÔNG &#7842;NH H&#431;&#7902;NG &#272;&#7870;N B&#7844;T K&#7922;
+TRÁCH NHI&#7878;M PHÁP LÝ NÀO KHÔNG TH&#7874;</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> B&#7882;</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> LO&#7840;I TR&#7914;
+HO&#7862;C GI&#7898;I H&#7840;N THEO </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>QUY &#272;&#7882;NH C&#7910;A PHÁP LU&#7852;T</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>.</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>QUY&#7872;N
+S&#7902; H&#7918;U TRÍ TU&#7878;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>VinFast</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> ho&#7863;c ng&#432;&#7901;i c&#7845;p phép ho&#7863;c nhà
+cung c&#7845;p </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>D</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>&#7883;ch v&#7909; </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>B</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>ên </span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>T</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>h&#7913; </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>B</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>a c&#7911;a
+chúng tôi b&#7843;o l&#432;u và s&#7869; gi&#7919; quy&#7873;n s&#7903; h&#7919;u
+&#273;&#7889;i v&#7899;i b&#7845;t k&#7923; và t&#7845;t c&#7843; các quy&#7873;n
+trong và &#273;&#7889;i v&#7899;i D&#7883;ch v&#7909; c&#361;ng nh&#432; m&#7885;i
+nhãn hi&#7879;u, bi&#7875;u t&#432;&#7907;ng, b&#7843;n quy&#7873;n, b&#7857;ng
+sáng ch&#7871; và các quy&#7873;n s&#7903; h&#7919;u trí tu&#7879; khác
+&#273;&#432;&#7907;c s&#7917; d&#7909;ng liên quan &#273;&#7871;n D&#7883;ch v&#7909;,
+tr&#7915; khi &#273;&#432;&#7907;c quy &#273;&#7883;nh rõ ràng trong các
+&#272;i&#7873;u kho&#7843;n này. Do &#273;ó, không có </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>n&#7897;i dung nào</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>trong
+các &#272;i&#7873;u kho&#7843;n này s&#7869; &#273;&#432;&#7907;c hi&#7875;u là
+chuy&#7875;n giao ho&#7863;c c&#7845;p b&#7845;t k&#7923; quy&#7873;n s&#7903;
+h&#7919;u trí tu&#7879; nào </span></span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>liên quan &#273;&#7871;n</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> D&#7883;ch
+v&#7909; ngo&#7841;i tr&#7915; liên quan &#273;&#7871;n quy&#7873;n h&#7841;n
+ch&#7871; &#273;&#7875; s&#7917; d&#7909;ng các quy&#7873;n s&#7903; h&#7919;u
+trí tu&#7879; nh&#432; &#273;&#432;&#7907;c trình bày rõ ràng trong </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;i&#7873;u
+kho&#7843;n</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> này.</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></b><b><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>QUY&#7872;N RIÊNG
+T&#431; VÀ B&#7842;O M&#7852;T D&#7918; LI&#7878;U</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>10.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#273;&#7891;ng ý</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> r&#7857;ng
+&#273;&#7875; Quý khách có th&#7875; s&#7917; d&#7909;ng &#273;&#7847;y &#273;&#7911;
+các D&#7883;ch v&#7909;, chúng tôi có th&#7875; c&#7847;n s&#7917; d&#7909;ng
+các ph&#432;&#417;ng ti&#7879;n t&#7921; &#273;&#7897;ng &#273;&#7875; thu th&#7853;p</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> d&#7919; li&#7879;u</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> v&#7873;
+vi&#7879;c Quý khách s&#7917; d&#7909;ng D&#7883;ch v&#7909; và Quý khách có th&#7875;
+&#273;&#432;&#7907;c yêu c&#7847;u cung c&#7845;p m&#7897;t s&#7889; thông tin
+nh&#7845;t &#273;&#7883;nh v&#7873; b&#7843;n thân nh&#432; m&#7897;t &#273;i&#7873;u
+ki&#7879;n</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> </span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>&#273;&#7875;</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> có th&#7875;</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> t&#7843;i xu&#7889;ng,
+cài &#273;&#7863;t ho&#7863;c s&#7917; d&#7909;ng D&#7883;ch v&#7909; (g&#7885;i
+chung là “<b>D&#7919; li&#7879;u ng&#432;&#7901;i dùng</b>”). Chúng tôi
+c&#361;ng có th&#7875; chuy&#7875;n D&#7919; li&#7879;u ng&#432;&#7901;i dùng
+mà Quý khách &#273;ã cung c&#7845;p cho VinFast cho các bên th&#7913; ba &#273;&#7875;
+th&#7921;c hi&#7879;n các m&#7909;c &#273;ích &#273;&#432;&#7907;c mô t&#7843;
+trong ph&#7847;n này. VinFast h</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>o&#7841;t</span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> <span lang=vi>&#273;&#7897;ng theo t&#7845;t
+c&#7843; các quy &#273;&#7883;nh hi&#7879;n hành v&#7873; b&#7843;o v&#7879; d&#7919;
+li&#7879;u và s&#7869; c&#7889; g&#7855;ng h&#7871;t s&#7913;c &#273;&#7875; b&#7843;o
+v&#7879; </span></span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>t&#7845;t c&#7843; các</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> thông tin </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>do</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>Quý
+khách cung c&#7845;p.</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>10.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Toàn b&#7897;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> D&#7919;
+li&#7879;u Ng&#432;&#7901;i dùng mà VinFast thu th&#7853;p thông qua ho&#7863;c
+liên quan &#273;&#7871;n D&#7883;ch v&#7909; </span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>s&#7869; &#273;&#432;&#7907;c b&#7843;o
+m&#7853;t theo </span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>ph&#7843;i tuân theo </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>Chính sách Quy&#7873;n riêng t&#432; cho
+Khách hàng</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>,</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>bao g&#7891;m d&#7919; li&#7879;u cá nhân
+ho&#7863;c thông tin cá nhân. B&#7857;ng cách cung c&#7845;p D&#7919; li&#7879;u
+ng&#432;&#7901;i dùng thông qua</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> vi&#7879;c s&#7917; d&#7909;ng</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> D&#7883;ch v&#7909;,
+Quý khách &#273;&#7891;ng ý </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>cho</span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> </span><span style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'>phép </span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>VinFast th&#7921;c hi&#7879;n</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> các hành &#273;&#7897;ng
+liên quan</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> &#273;&#7889;i v&#7899;i thông tin c&#7911;a Quý khách </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>theo Chính sách
+Quy&#7873;n riêng t&#432; cho Khách hàng nói trên</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>, bao g&#7891;m c&#7843;
+vi&#7879;c s&#7917; d&#7909;ng toàn b&#7897; ho&#7863;c m&#7897;t ph&#7847;n D&#7919;
+li&#7879;u ng&#432;&#7901;i dùng cho các </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>m</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>&#7909;c &#273;ích (nh&#432; </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>quy &#273;&#7883;nh
+t&#7841;i M&#7909;c 10.3 d&#432;&#7899;i &#273;ây</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>10.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>VinFast không yêu
+c&#7847;u b&#7845;t k&#7923; quy&#7873;n s&#7903; h&#7919;u nào &#273;&#7889;i
+v&#7899;i b&#7845;t k&#7923; D&#7919; li&#7879;u ng&#432;&#7901;i dùng và không
+có </span><span style='font-size:10.0pt;line-height:110%;font-family:Mulish'>n&#7897;i
+dung nào</span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> trong &#272;i&#7873;u kho&#7843;n này h&#7841;n ch&#7871;
+b&#7845;t k&#7923; quy&#7873;n nào </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>c&#7911;a</span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'> <span lang=vi>Quý khách </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>trong vi&#7879;c </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>s&#7917; d&#7909;ng
+D&#7919; li&#7879;u ng&#432;&#7901;i dùng &#273;ó. Tuy nhiên, b&#7857;ng cách t&#7843;i
+xu&#7889;ng, cài &#273;&#7863;t ho&#7863;c s&#7917; d&#7909;ng D&#7883;ch v&#7909;</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> ho&#7863;c b&#7857;ng
+cách khác </span><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>cung c&#7845;p D&#7919; li&#7879;u ng&#432;&#7901;i dùng
+cho VinFast thông qua D&#7883;ch v&#7909;, Quý khách</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> &#273;&#7891;ng ý</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> c&#7845;p
+cho VinFast </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>quy&#7873;n</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> không &#273;&#7897;c quy&#7873;n, có th&#7875; chuy&#7875;n
+nh&#432;&#7907;ng, v&#297;nh vi&#7877;n, có th&#7875; c&#7845;p phép l&#7841;i,
+trên toàn th&#7871; gi&#7899;i, mi&#7877;n phí &#273;&#7875; s&#7917; d&#7909;ng,
+sao chép, s&#7917;a &#273;&#7893;i và phân ph&#7889;i D&#7919; li&#7879;u
+Ng&#432;&#7901;i dùng &#273;ó cho các m&#7909;c &#273;ích do VinFast xác &#273;&#7883;nh
+t&#7841;i t&#7915;ng th&#7901;i &#273;i&#7875;m, bao g&#7891;m (i) m&#7909;c
+&#273;ích v&#7853;n hành và cung c&#7845;p D&#7883;ch v&#7909;, (ii) m&#7909;c
+&#273;ích phát tri&#7875;n kinh doanh c&#7911;a VinFast, (iii) m&#7909;c
+&#273;ích th&#7889;ng kê</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>,</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> (iv) tuân th&#7911; lu&#7853;t pháp, </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>theo yêu c&#7847;u
+c&#7911;a C&#417; quan Nhà n&#432;&#7899;c có th&#7849;m quy&#7873;n</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'> và (iv)
+các m&#7909;c &#273;ích</span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> &#273;ã</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'> &#273;&#432;&#7907;c nêu trong </span><a
+name="OLE_LINK12"></a><a name="OLE_LINK11"><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>Chính sách Quy&#7873;n riêng t&#432;</span></a><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> cho Khách hàng. </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:40.5pt;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>10.4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Quý khách &#273;&#7891;ng
+ý r&#7857;ng chúng tôi có th&#7875; cài &#273;&#7863;t các b&#7843;n c&#7853;p
+nh&#7853;t ph&#7847;n m&#7873;m qua m&#7841;ng</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> </span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>cho
+ph&#432;&#417;ng ti&#7879;n và D&#7883;ch v&#7909;. Quý khách c&#361;ng &#273;&#7891;ng
+ý r&#7857;ng chúng tôi có th&#7875; t&#7921; &#273;&#7897;ng l&#7845;y thông
+tin t&#7915; xe, nh&#432; &#273;&#432;&#7907;c </span><span style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>nêu</span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> trong</span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'> Chính sách Quy&#7873;n
+riêng t&#432; cho Khách hàng</span><span lang=vi style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>. </span><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>M</span><span lang=vi style='font-size:
+10.0pt;line-height:110%;font-family:Mulish'>&#7897;t s&#7889; D&#7883;ch v&#7909;
+có th&#7875; không kh&#7843; d&#7909;ng trong quá trình c&#7853;p nh&#7853;t ph&#7847;n
+m&#7873;m.</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>11.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></b><b><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>GI&#7842;I QUY&#7870;T
+TRANH CH&#7844;P; LU&#7852;T </span></b><b><span style='font-size:10.0pt;
+line-height:110%;font-family:Mulish'>&#272;I&#7872;U CH&#7880;NH</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:40.5pt;text-indent:-27.0pt'><a
+name="_Ref104497817"><span lang=vi style='font-size:10.0pt;font-family:Mulish'>11.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'>Th&#7887;a thu&#7853;n này s&#7869;
+&#273;&#432;&#7907;c gi&#7843;i thích, gi&#7843;i ngh&#297;a và &#273;i&#7873;u
+ch&#7881;nh b&#7903;i pháp lu&#7853;t Vi&#7879;t Nam.</span></a></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:40.5pt;text-indent:-27.0pt'><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'>11.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=vi style='font-size:10.0pt;font-family:Mulish'>Trong
+tr&#432;&#7901;ng h&#7907;p x&#7843;y ra tranh ch&#7845;p phát sinh t&#7915; ho&#7863;c
+liên quan &#273;&#7871;n Th&#7887;a thu&#7853;n này, tr&#432;&#7899;c tiên các
+bên s&#7869; tìm gi&#7843;i pháp thông qua </span><span style='font-size:10.0pt;
+font-family:Mulish'>th&#432;&#417;ng l&#432;&#7907;ng</span><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'> và hòa gi&#7843;i. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:40.5pt;text-indent:-27.0pt'><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'>11.3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:Mulish'>Tr&#432;&#7901;ng
+h&#7907;p Quý khách là t&#7893; ch&#7913;c: </span><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'>M&#7885;i tranh ch&#7845;p phát
+sinh do ho&#7863;c liên quan &#273;&#7871;n Th&#7887;a thu&#7853;n hi&#7879;n t&#7841;i
+s&#7869; &#273;&#432;&#7907;c gi&#7843;i quy&#7871;t thông qua Trung tâm Tr&#7885;ng
+tài Qu&#7889;c t&#7871; Vi&#7879;t Nam theo các quy t&#7855;c tr&#7885;ng tài
+hi&#7879;n hành b&#7903;i m&#7897;t tr&#7885;ng tài &#273;&#432;&#7907;c b&#7893;
+nhi&#7879;m theo các quy t&#7855;c nói trên. &#272;&#7883;a &#273;i&#7875;m gi&#7843;i
+quy&#7871;t tranh ch&#7845;p là Hà N&#7897;i, Vi&#7879;t Nam. Ngôn ng&#7919; s&#7917;
+d&#7909;ng là ti&#7871;ng Vi&#7879;t. Phán quy&#7871;t c&#7911;a tr&#7885;ng
+tài là phán quy&#7871;t cu&#7889;i cùng và có giá tr&#7883; b&#7855;t bu&#7897;c
+&#273;&#7889;i v&#7899;i các bên.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:6.0pt;margin-right:0in;
+margin-bottom:6.0pt;margin-left:40.5pt;text-indent:-27.0pt'><span lang=vi
+style='font-size:10.0pt;font-family:Mulish'>11.4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:Mulish'>Tr&#432;&#7901;ng
+h&#7907;p Quý khách là cá nhân: Quý khách có quy&#7873;n l&#7921;a ch&#7885;n ph&#432;&#417;ng
+th&#7913;c gi&#7843;i quy&#7871;t tranh ch&#7845;p thông qua Tòa án. </span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>12.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></b><b><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;I&#7872;U
+KHO&#7842;N KHÁC</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>12.1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>N&#7871;u b&#7845;t
+k&#7923; </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>n&#7897;i dung</span><span lang=vi style='font-size:10.0pt;line-height:
+110%;font-family:Mulish'> nào trong &#272;i&#7873;u kho&#7843;n này không th&#7875;
+thi hành theo lu&#7853;t hi&#7879;n hành, ph&#7847;n còn l&#7841;i c&#7911;a </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;</span><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>i&#7873;u kho&#7843;n
+s&#7869; </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>không b&#7883; &#7843;nh h&#432;&#7903;ng và v&#7851;n ti&#7871;p t&#7909;c
+có hi&#7879;u l&#7921;c &#273;&#7847;y &#273;&#7911;. Ph&#7847;n &#273;i&#7873;u
+kho&#7843;n không th&#7875; thi hành s&#7869; </span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#273;&#432;&#7907;c
+s&#7917;a &#273;&#7893;i &#273;&#7875; &#273;&#7841;t &#273;&#432;&#7907;c hi&#7879;u
+l&#7921;c </span><span style='font-size:10.0pt;line-height:110%;font-family:
+Mulish'>theo h&#432;&#7899;ng g&#7847;n nh&#7845;t v&#7899;i n&#7897;i dung ban
+&#273;&#7847;u. </span><span style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'> </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.55in;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>12.2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=vi
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>&#272;i&#7873;u
+kho&#7843;n này, bao g&#7891;m các chính sách và các tài li&#7879;u khác
+&#273;&#432;&#7907;c &#273;&#7873; c&#7853;p &#7903; &#273;ây, c&#7845;u thành
+toàn b&#7897; th&#7887;a thu&#7853;n gi&#7919;a Quý khách và VinFast &#273;&#7889;i
+v&#7899;i D&#7883;ch v&#7909; và thay th&#7871; t&#7845;t c&#7843; các hi&#7875;u
+bi&#7871;t và th&#7887;a thu&#7853;n tr&#432;&#7899;c &#273;ây, cho dù b&#7857;ng
+v&#259;n b&#7843;n hay b&#7857;ng l&#7901;i nói, &#273;&#7889;i v&#7899;i D&#7883;ch
+v&#7909;.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.55in;text-indent:-26.1pt'><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>12.3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>Vi&#7879;c m&#7897;t
+bên không th&#7921;c hi&#7879;n ho&#7863;c ch&#7853;m th&#7921;c hi&#7879;n m&#7897;t
+quy&#7873;n hay ch&#7871; tài không &#273;&#432;&#7907;c coi là Bên &#273;ó
+&#273;ã t&#7915; b&#7887; quy&#7873;n hay ch&#7871; tài &#273;ó, hay t&#7915; b&#7887;
+các quy&#7873;n hay ch&#7871; tài khác. Vi&#7879;c th&#7921;c hi&#7879;n ch&#7881;
+m&#7897;t hay m&#7897;t ph&#7847;n quy&#7873;n hay ch&#7871; tài s&#7869; không
+ng&#259;n vi&#7879;c th&#7921;c hi&#7879;n các quy&#7873;n hay ch&#7871; tài
+&#273;ó ti&#7871;p theo sau này, c&#361;ng nh&#432; vi&#7879;c th&#7921;c hi&#7879;n
+quy&#7873;n hay ch&#7871; tài khác.</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in'><b><span
+lang=vi style='font-size:10.0pt;line-height:110%;font-family:Mulish'>13.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></b><b><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>LIÊN H&#7878;</span></b></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>N&#7871;u Quý khách có b&#7845;t k&#7923; câu h&#7887;i ho&#7863;c
+th&#7855;c m&#7855;c nào liên quan &#273;&#7871;n D&#7883;ch v&#7909;, Quý
+khách có th&#7875; liên h&#7879; v&#7899;i chúng tôi b&#7857;ng cách s&#7917; d&#7909;ng
+thông tin liên h&#7879; d&#432;&#7899;i &#273;ây:</span></p>
+
+<p class=pf0 style='margin:0in;margin-bottom:.0001pt'><span class=cf01><span
+style='font-size:9.0pt;font-family:Mulish'>&nbsp;</span></span></p>
+
+<p class=pf0 style='margin:0in;margin-bottom:.0001pt;text-align:justify'><span
+class=cf01><b><span style='font-size:10.0pt;font-family:Mulish'>CÔNG TY TNHH
+KINH DOANH TH&#431;&#416;NG M&#7840;I VÀ D&#7882;CH V&#7908; VINFAST</span></b></span></p>
+
+<p class=pf0 style='margin:0in;margin-bottom:.0001pt;text-align:justify'><span
+class=cf01><b><span style='font-size:10.0pt;font-family:Mulish'>&#272;&#7883;a
+ch&#7881; tr&#7909; s&#7903; chính:</span></b></span><span class=cf01><span
+style='font-size:10.0pt;font-family:Mulish'> S&#7889; 7, &#273;&#432;&#7901;ng
+B&#7857;ng L&#259;ng 1, Khu &#273;ô th&#7883; sinh thái Vinhomes Riverside,
+Ph&#432;&#7901;ng Vi&#7879;t H&#432;ng, Qu&#7853;n Long Biên, Thành ph&#7889;
+Hà N&#7897;i, Vi&#7879;t Nam</span></span></p>
+
+<p class=pf0 style='margin:0in;margin-bottom:.0001pt;text-align:justify'><span
+class=cf21><b><span style='font-size:10.0pt;font-family:Mulish'>&#272;i&#7879;n
+tho&#7841;i:</span></b></span><span class=cf21><span style='font-size:10.0pt;
+font-family:Mulish'> </span></span><a href="tel://1900232389/"><span
+style='font-size:10.0pt;font-family:Mulish'>1900232389</span></a></p>
+
+<p class=pf0 style='margin:0in;margin-bottom:.0001pt;text-align:justify'><span
+class=cf21><b><span style='font-size:10.0pt;font-family:Mulish'>Email:</span></b></span><span
+class=cf21><span style='font-size:10.0pt;font-family:Mulish'> </span></span><a
+href="mailto:support.vn@vinfastauto.com"><span style='font-size:10.0pt;
+font-family:Mulish'>support.vn@vinfastauto.com</span></a></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>C&#7853;p nh&#7853;t l&#7847;n cu&#7889;i: </span><span
+style='font-size:10.0pt;line-height:110%;font-family:Mulish'>16/08/2022</span></p>
+
+<p class=MsoNormal><span lang=vi style='font-size:10.0pt;line-height:110%;
+font-family:Mulish'>&nbsp;</span></p>
+
+</div>
 
 </body>
 
